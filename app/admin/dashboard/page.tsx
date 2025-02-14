@@ -2,6 +2,8 @@
  /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
+
+import ProductedRoute from '@/app/components/protected';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
@@ -113,6 +115,7 @@ export default function AdminDashboard() {
     }
   };
   return (
+    <ProductedRoute>
     <div className="flex flex-col h-screen bg-gray-100">
       <nav className="bg-blue-600 text-white p-5 shadow-lg flex justify-between items-center">
         <h2 className="text-3xl font-bold">Admin Dashboard</h2>
@@ -228,6 +231,7 @@ export default function AdminDashboard() {
         </div>
       </div>
     </div>
+    </ProductedRoute>
   );
 }
 
