@@ -1,8 +1,8 @@
 'use client'
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 
-export default function ProductedRoute ({children}:{children : React.ReactNode}){
+export  function ProductedRoute ({children}:{children : React.ReactNode}){
     const router = useRouter()
 
     useEffect(()=>{
